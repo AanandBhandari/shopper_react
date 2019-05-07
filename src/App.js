@@ -22,10 +22,11 @@ class App extends React.Component {
         break;
     }
   }
+  
   render() {
     let {activeTab} = this.state
     return (
-      <div className="App">
+      <div className="App" >
         <Nav activeTab={activeTab} onTabChange={this.handleTabChange} />
         <main className="App-content">{this.renderContent()}</main>
       </div>
