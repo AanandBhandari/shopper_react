@@ -5,9 +5,11 @@ const Nav = ({activeTab,onTabChange}) => {
             <ul>
                 <li className={`App-nav-item ${activeTab === 0 && 'selected'}`}>
                     <NavLink index={0} onClick={onTabChange}>Items</NavLink>
+                    
                 </li>
                 <li className={`App-nav-item ${activeTab === 1 && 'selected'}`}>
                     <NavLink index={1} onClick={onTabChange}>Cart</NavLink>
+                    {/* <a onClick={() => onTabChange(1)}>Cart</a> */}
                 </li>
             </ul>
         </nav>
@@ -15,6 +17,7 @@ const Nav = ({activeTab,onTabChange}) => {
 }
 class NavLink extends React.Component {
     handleClick = () => {
+        console.log('hello');
         this.props.onClick(this.props.index);
     }
     render() {
